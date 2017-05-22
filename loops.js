@@ -1,29 +1,33 @@
-var gifts = ['teddy bear', 'drone', 'doll']
+var anArray = [];
 
-function forLoop(anArg) {
-  for (let i = 0; i < 25; i++) {
-  if (i = 1) {
-    anArg.push("I am 1 strange loop.")
-  } else {
-    anArg.push("I am ${i} strange loops.")
+function forLoop(array) {
+  for(var i = 0; i < 25; i++) {
+    if(i === 1) {
+      array.push("I am 1 strange loop.");
+    } else {
+      array.push("'I am ' + i + ' strange loop'");
+    }
   }
- }
- return anArg
+  return array;
 }
-forLoop(gifts)
+forLoop(anArray)
 
-function whileLoop(num) {
-  while (countdown > 0) {
-   console.log(--countdown)
-   }
- return 'done'
+function whileLoop(n) {
+  while(n > 0) {
+    console.log(--n)
+  }
+  return 'done'
 }
 whileLoop(5)
 
-function doWhileLoop(anArray) {
+function doWhileLoop(array) {
+  var array = [];
+  function maybeTrue() {
+  return Math.random() >= 0.5
+  }
   do {
-  anArray.pop()
-   } while (array.length > 0);
-   return anArray
+    console.log('doo-bee-doo-bee-doo')
+  } while (array.length > 0 && maybeTrue());
+  return array;
 }
-doWhileLoop(gifts)
+doWhileLoop(anArray)
